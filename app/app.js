@@ -5,16 +5,16 @@ var number = 5
 
 var answer = randomNumber(0, 10);
 var totalGuess = number;
-$('body').append('<h4>Computer: ' + answer + '</h4>')
+console.log(answer)
 
 function checkGuess(input) {
 	if(input === answer){
-		console.log("Correct Answer")
+		$(".hotOrCold").text("Correct Answer")
 		winner();
 	} else if (input > answer){
-		console.log("you are too high")
+		$(".hotOrCold").text("you are too high")
 	} else {
-		console.log("you are too low")
+		$(".hotOrCold").text("you are too low")
 	}
 		totalGuess --
 }
@@ -23,20 +23,25 @@ function checkGuess(input) {
 function reset(){
 	answer = randomNumber(0,10);
 	totalGuess = number;
-	$('body').append('<h4>Computer: ' + answer + '</h4>')
+	$('.inputDiv').removeClass("hide");
 	$('.guessBtn').attr("disabled", false)
+	$(".hotOrCold").text("")
 	$('.guessleft').text(totalGuess);
+	$('span').remove();
 }
 
 function winner(){
+	$('.guessBtn').attr("disabled", true)
 	$('.resetBtn').text("Play Again")
-	$('.numbersGuess').text("")
-	$('.numbersGuess').append('<p>Correct!</p>')
 }
 
 function gameOver(){
 	if(totalGuess === 0){
-		$('body').append('<h4> GAME OVER </h4>')
+		$('.guessBtn').attr("disabled", true)
+		$('.inputDiv').addClass("hide");
+		$(".hotOrCold").text('OH NO! You were not able to guess the right number. Do you want to try again?')
+		$(".hotOrCold").append('<button class="yes">Yes</button>')
+		$(".hotOrCold").append('<button class="no">No</button>')
 		$('.resetBtn').html("Try Again")
 		
 	}
@@ -45,6 +50,7 @@ function gameOver(){
 function displayGuess(input){
 	$('.numbers').append('<span>' + input + '<span>')
 }
+
 
 $('.guessBtn').click(function (){
 	var input = Number($('input').val())
@@ -55,8 +61,17 @@ $('.guessBtn').click(function (){
 	gameOver()
 })
 
+
 $('.resetBtn').click(function (){
 	reset()
+})
+
+$(document).on("click", ".yes", function (){
+	reset()
+})
+
+$(document).on("click", ".no", function (){
+	$(".hotOrCold").text("Sad to see you go!! Good luck on your next adventure")
 })
 
 

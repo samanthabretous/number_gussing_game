@@ -7,23 +7,25 @@
 	<script type="text/javascript" src="app.js" defer></script>
 </head>
 <body>
-	<h1>Number Guessing Game</h1>
 	<div class="game">
+		<h1>Can You Guess The Number</h1>
 
 		<div class="guessInput">
-			<input type="text" placeholder="Enter Your Guess Here" value="4">
-			<button class="guessBtn">Guess</button>
-		</div>
-
-		<div class="gameInfo">
-			<div class="numbersGuess">
-				<p>You have guessed: </p>
-				<p class="numbers"></p>
+			<div class="inputDiv">
+				<input type="text" placeholder="Enter Guess" value="4">
+				<button class="guessBtn">Guess</button>
 			</div>
-			<p>Guesses left:<span class="guessleft">5</span> </p>
-			<button class="resetBtn">Start Over</button>
+			<p class="hotOrCold"></p>
 		</div>
 
+	</div>
+	<div class="gameInfo">
+		<div class="numbersGuess">
+			<h6>You have guessed </h6>
+			<p class="numbers"></p>
+		</div>
+		<h6>Guesses left<p class="guessleft">5</p> </h6>
+		<button class="resetBtn">Start Over</button>
 	</div>
 
 </body>

@@ -1,0 +1,30 @@
+{
+  "name": "number_guessing_game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samanthabretous/number_gussing_game.git"
+  },
+  "author": "Samantha Bretous <sam@samanthabretous.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-compass": "^2.1.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "run-sequence": "^1.2.2"
+  },
+  "bugs": {
+    "url": "https://github.com/samanthabretous/number_gussing_game/issues"
+  },
+  "homepage": "https://github.com/samanthabretous/number_gussing_game#readme"
+}
