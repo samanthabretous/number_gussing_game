@@ -1,0 +1,38 @@
+/*lightBlue: #9EFFCF
+redBrown: #B2574B*/
+
+body{
+	display: flex;
+	margin: 0 auto;
+	text-align: center;
+	flex-direction: column;
+}
+
+.game{
+	display: flex;
+	justify-content: center;
+}
+
+.guessInput{
+	border: 2px solid red;
+	display: flex;
+	flex-direction: column;
+}
+
+input{
+	font-size: 36px;
+	text-align: center;
+	width: 200px;
+}
+
+.guessBtn{
+	font-size: 24px;
+}
+
+.gameInfo{
+	border: 2px solid blue;
+}
+
+.resetBtn{
+	width: 200px;
+}
